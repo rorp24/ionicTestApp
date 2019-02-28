@@ -25,7 +25,7 @@ export class ApiService {
       let page = Math.floor(Math.random() * Math.floor(6));
       
       // Return real API data and store it locally
-      return this.http.get(`${API_URL}/users?per_page=2&page=${page}`).pipe(
+      return this.http.get(`${API_URL}/users?per_page=10&page=${page}`).pipe(
         map(res => res['data']),
         tap(res => {
           this.setLocalData('users', res);
