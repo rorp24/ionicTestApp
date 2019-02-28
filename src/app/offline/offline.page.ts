@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-offline',
+  templateUrl: 'offline.page.html',
+  styleUrls: ['offline.page.scss'],
 })
-export class HomePage implements OnInit {
+export class OfflinePage implements OnInit {
  
   users = [];
  

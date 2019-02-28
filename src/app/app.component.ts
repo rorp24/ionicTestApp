@@ -24,6 +24,11 @@ export class AppComponent {
       title: 'Map',
       url: '/page-map',
       icon: 'globe'
+    },
+    {
+      title: 'offline',
+      url: '/offline',
+      icon: 'alert'
     }
   ];
 
