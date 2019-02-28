@@ -15,7 +15,14 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'page-map', loadChildren: './page-map/page-map.module#PageMapPageModule' }
+  { 
+  	path: 'page-map', 
+  	loadChildren: './page-map/page-map.module#PageMapPageModule' 
+  },
+  {
+  	path: 'offline', 
+  	loadChildren: './offline/offline.module#OfflinePageModule' 
+  }
 ];
 
 @NgModule({
