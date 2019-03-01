@@ -5,7 +5,7 @@ import { HomePage } from './offline.page';
 
 describe('OfflinePage', () => {
   let component: OfflinePage;
-  let fixture: ComponentFixture<HomePage>;
+  let fixture: ComponentFixture<OfflinePage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -16,7 +16,7 @@ describe('OfflinePage', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomePage);
+    fixture = TestBed.createComponent(OfflinePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
