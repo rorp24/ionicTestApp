@@ -19,16 +19,16 @@ export class ApiService {
   getUsers(forceRefresh: boolean = false): Observable<any[]> {
     if (this.networkService.getCurrentNetworkStatus() == ConnectionStatus.Offline || !forceRefresh) {
       // Return the cached data from Storage
+      console.log("utilisateurs locaux chargés");
       return from(this.getLocalData('users'));
-    } else {
-      // Just to get some "random" data
-      let page = Math.floor(Math.random() * Math.floor(6));
-      
+    } else {   
       // Return real API data and store it locally
-      return this.http.get(`${API_URL}/users?per_page=10&page=${page}`).pipe(
+      console.log("utilisateurs online chargés");
+        return this.http.get(`${API_URL}/users?per_page=10`).pipe(
         map(res => res['data']),
         tap(res => {
           this.setLocalData('users', res);
+          
         })
       )
     }
